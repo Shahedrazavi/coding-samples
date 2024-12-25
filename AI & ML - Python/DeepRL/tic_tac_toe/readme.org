@@ -1,0 +1,115 @@
+#+TITLE: Tic-Tac-Toe Q-Learning
+
+بازی ایکس او و الگوریتم Q-Learning برای حل آن در اختیار شما قرار گرفته است.
+
+* Install Dependencies
+#+begin_example zsh
+pip install -U numpy open_spiel
+#+end_example
+
+* TD-Learning on State-Action Pairs (Q-Learning)
+
+قسمت هایی که با =fillMe= مشخص شده اند را تکمیل کنید. سپس با دستور زیر برنامه را اجرا کنید:
+
+#+begin_example zsh
+python tic_tac_toe_qlearner.py --interactive_play=true
+#+end_example
+
+نتایج برد و باخت شما در خطوطی مشابه زیر خروجی داده می‌شوند:
+
+#+begin_example
+I0106 01:25:38.127532 8466184832 tic_tac_toe_qlearner.py:164] Starting episode 39999, win_rates [0.988 0.791], lose_rates [0.    0.092] against random_agents
+I0106 01:25:38.583564 8466184832 tic_tac_toe_qlearner.py:164] Starting episode 39999, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
+#+end_example
+
+باید نرخ باخت شما کمتر از ۰.۲ باشد. در پایان، می‌توانید با هوش‌مصنوعی به بازی بپردازید. با زدن کنترل و c میتوانید برنامه را ببندید.
+
+درنهایت وقتی به خروجی مطلوب رسیدید، نتیجه اجرای برنامه را در یک فایل متنی به نام result_1.txt کپی کنید. این کار در bash بصورت زیر نیز قابل انجام است:
+
+#+begin_example
+python tic_tac_toe_qlearner.py --interactive_play=false >& result_1.txt
+#+end_example
+
+
+** با دادن تغییرات مناسب در فایل های داده شده، پاداش مدل را به نحوی تغییر دهید که الگوی زیر برایش پاداش بالایی (در اوردر هزار) داشته باشد:
+
+#+begin_example
+reward_mask = np.array([[0, 1, 0],
+                        [1, 0, 1],
+                        [0, 0, 0]])
+#+end_example
+
+توجه کنید که رسیدن به این الگو برای بازیکن پاداش مثبت زیادی دارد، ولی رسیدن حریف به این الگو تاثیری در پاداش بازیکن ندارد.
+
+دوباره اجرا بگیرید و آن را در result_2.txt قرار دهید. چه اتفاقی افتاده است؟ تحلیل خود را در فایل result_2_analysis.txt بنویسید. اگر رسیدن حریف به این الگو پاداش منفی داشته باشد چه اتفاقی خواهد افتاد؟
+
+* TD-Learning on States
+
+*این سوال حذف شده است و نیازی به تحویل آن نیست.*
+
+الگوریتم TD-Learning بر روی state ها (و نه state-action ها مثل Q-Learning) را در فایل tabular_tdlearner.py پیاده سازی کنید. برای اجرای این الگوریتم نیاز به تغییراتی در فایل tic_tac_toe_qlearner.py هم می باشید؛ این فایل را به نام tic_tac_toe_tdlearner.py کپی کنید و تغییرات لازم را در آن بدهید. از پاداش تغییریافته مرحله قبل *استفاده نکنید*.
+
+درنهایت وقتی به خروجی مناسب رسیدید، آن را در فایل result_3.txt قرار دهید:
+
+#+begin_example zsh
+python tic_tac_toe_tdlearner.py --interactive_play=false >& result_3.txt
+#+end_example
+
+برای پیاده سازی این الگوریتم، دیدن تکه کد های زیر شاید برایتان مفید باشد:
+
+#+begin_src jupyter-python :kernel py_310 :session emacs_py_1 :async yes :exports both
+game = pyspiel.load_game("tic_tac_toe")
+state_start = game.new_initial_state()
+state_start
+#+end_src
+
+#+RESULTS:
+: ...
+: ...
+: ...
+
+
+#+begin_src jupyter-python :kernel py_310 :session emacs_py_1 :async yes :exports both
+state = state_start.clone()
+print(state)
+print("#############")
+
+for a in [4, 2, 8, 7, 0, 1]:
+    state.apply_action(a)
+    print(state)
+    print(f"rewards: player_0={state.player_reward(0)} player_1={state.player_reward(1)}")
+    print("#############")
+    if state.is_terminal():
+        break
+#+end_src
+
+#+RESULTS:
+: ...
+: ...
+: ...
+: #############
+: ...
+: .x.
+: ...
+: rewards: player_0=0.0 player_1=0.0
+: #############
+: ..o
+: .x.
+: ...
+: rewards: player_0=0.0 player_1=0.0
+: #############
+: ..o
+: .x.
+: ..x
+: rewards: player_0=0.0 player_1=0.0
+: #############
+: ..o
+: .x.
+: .ox
+: rewards: player_0=0.0 player_1=0.0
+: #############
+: x.o
+: .x.
+: .ox
+: rewards: player_0=1.0 player_1=-1.0
+: #############

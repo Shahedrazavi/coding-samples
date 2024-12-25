@@ -1,0 +1,203 @@
+I0208 19:35:27.495070 140515623511872 rl_environment.py:183] Using game string: tic_tac_toe
+I0208 19:35:29.055016 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 0, win_rates [0.796 0.467], lose_rates [0.156 0.487] against random_agents
+I0208 19:35:30.475141 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 0, win_rates [1. 0.], lose_rates [0. 1.] against qlearning_agents
+I0208 19:35:43.777957 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 10000, winwin_rates [0.987 0.832], lose_rates [0.   0.06] against random_agents
+I0208 19:36:31.623817 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 40000, win_rates [0. 0.], lose_rates [0. 0.]_rates [0.959 0.585], lose_rates [0.011 0.324] against random_agents
+I0208 19:35:45.476673 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 10000, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
+I0208 19:35:59.034984 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 20000, win_rates [0.983 0.743], lose_rates [0.    0.156] against random_agents
+I0208 19:36:00.726190 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 20000, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
+I0208 19:36:14.728589 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 30000, win_rates [0.984 0.765], lose_rates [0.    0.096] against random_agents
+I0208 19:36:16.410039 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 30000, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
+I0208 19:36:29.882709 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 40000,  against qlearning_agents
+I0208 19:36:46.015919 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 50000, win_rates [0.973 0.867], lose_rates [0.   0.03] against random_agents
+I0208 19:36:47.735184 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 50000, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
+I0208 19:37:00.918921 140515623511872 tic_tac_toe_qlearner.py:108] 
+not won: -1.0
+
+state:
+[['.' '.' '.']
+ ['.' '.' '.']
+ ['0' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['.' 'X' '.']
+ ['0' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['.' 'X' '0']
+ ['0' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['X' 'X' '0']
+ ['0' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['X' 'X' '0']
+ ['0' '0' '.']]
+
+
+state:
+[['X' '.' '.']
+ ['X' 'X' '0']
+ ['0' '0' '.']]
+
+
+state:
+[['X' '0' '.']
+ ['X' 'X' '0']
+ ['0' '0' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['X' 'X' '0']
+ ['0' '0' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['X' 'X' '0']
+ ['0' '0' '0']]
+
+I0208 19:37:00.924950 140515623511872 tic_tac_toe_qlearner.py:108] 
+not won: -1.0
+
+state:
+[['.' '.' '.']
+ ['.' '0' '.']
+ ['.' '.' '.']]
+
+
+state:
+[['.' '.' 'X']
+ ['.' '0' '.']
+ ['.' '.' '.']]
+
+
+state:
+[['.' '0' 'X']
+ ['.' '0' '.']
+ ['.' '.' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['.' '0' '.']
+ ['.' '.' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['.' '0' '.']
+ ['0' '.' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['.' '0' 'X']
+ ['0' '.' '.']]
+
+
+state:
+[['X' '0' 'X']
+ ['.' '0' 'X']
+ ['0' '0' '.']]
+
+I0208 19:37:00.950690 140515623511872 tic_tac_toe_qlearner.py:108] 
+not won: -1.0
+
+state:
+[['.' '.' '.']
+ ['0' '.' '.']
+ ['.' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['0' '.' '.']
+ ['X' '.' '.']]
+
+
+state:
+[['.' '.' '.']
+ ['0' '.' '.']
+ ['X' '.' '0']]
+
+
+state:
+[['.' 'X' '.']
+ ['0' '.' '.']
+ ['X' '.' '0']]
+
+
+state:
+[['.' 'X' '.']
+ ['0' '.' '0']
+ ['X' '.' '0']]
+
+
+state:
+[['.' 'X' 'X']
+ ['0' '.' '0']
+ ['X' '.' '0']]
+
+
+state:
+[['.' 'X' 'X']
+ ['0' '0' '0']
+ ['X' '.' '0']]
+
+I0208 19:37:00.957437 140515623511872 tic_tac_toe_qlearner.py:108] 
+not won: -1.0
+
+state:
+[['.' '.' '.']
+ ['.' '.' '0']
+ ['.' '.' '.']]
+
+
+state:
+[['.' 'X' '.']
+ ['.' '.' '0']
+ ['.' '.' '.']]
+
+
+state:
+[['.' 'X' '0']
+ ['.' '.' '0']
+ ['.' '.' '.']]
+
+
+state:
+[['.' 'X' '0']
+ ['.' '.' '0']
+ ['.' '.' 'X']]
+
+
+state:
+[['.' 'X' '0']
+ ['.' '0' '0']
+ ['.' '.' 'X']]
+
+
+state:
+[['X' 'X' '0']
+ ['.' '0' '0']
+ ['.' '.' 'X']]
+
+
+state:
+[['X' 'X' '0']
+ ['.' '0' '0']
+ ['0' '.' 'X']]
+
+I0208 19:37:01.486936 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 59999, win_rates [0.995 0.845], lose_rates [0.   0.05] against random_agents
+I0208 19:37:03.173102 140515623511872 tic_tac_toe_qlearner.py:164] Starting episode 59999, win_rates [0. 0.], lose_rates [0. 0.] against qlearning_agents
